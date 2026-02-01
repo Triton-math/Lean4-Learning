@@ -1,0 +1,10 @@
+name = "MyLeanJourney"
+version = "0.1.0"
+defaultTargets = ["myleanjourney"]
+
+[[lean_lib]]
+name = "MyLeanJourney"
+
+[[lean_exe]]
+name = "myleanjourney"
+root = "Main"
