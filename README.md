@@ -17,20 +17,33 @@ Step 1(ETA 1-3 Month)
         - The Lambda Cube（Lambda 立方）：理解从简单类型到 System F 再到 Calculus of Constructions (CoC) 的演进。Lean 的内核就是 CoC 的扩展。
 
     我建议采用 “以 MIL 为主线，遇到困惑查阅 TTFP” 的策略：
+
         第一阶段：感性认识（前 2 周）
+
             动作：也就是你现在正在做的事。配置好 Lean 4，强行推进 MIL 的前 3-4 章（Logic, Numbers, Sets）。
+
             心态： 不求甚解。遇到不懂的语法（比如 variable {G : Type*} [Group G]），先当成固定咒语背下来。
+
             目标： 跑通几个证明，获得多巴胺反馈。
+
         第二阶段：理论补完（当遇到瓶颈时）
             触发点： 当你开始对 Type, Type u, Prop 感到混乱，或者不知道为什么 a = b 既是一个命题又是一个类型的时候。
+
             动作： 暂停 MIL，打开 TTFP。阅读 Untyped Lambda Calculus (解决计算问题)。阅读 Simple Type Theory (解决基础类型问题)。阅读 Dependent Types (这是重中之重，对应 MIL 后期的内容)。
             注意： TTFP 里的符号可能和 Lean 不完全一样（它偏向 Coq/理论笔算），着重理解思想，不要纠结语法。
         第三阶段：深度融合（针对面试）
             动作： 回到 MIL，去攻克复杂的章节（如拓扑、代数结构）。
             挑战： 尝试不用 Tactic 模式（即不写 begin ... end 或 by ...），而是用 Term mode（项模式） 写一个简单的证明。比如： 证明 $A \to B \to A$。Tactic: intro h1, intro h2, exact h1Term: fun h1 h2 => h1
+
             悟道时刻： 当你发现上面两行代码完全等价时，你就打通了任督二脉（Curry-Howard 同构）。
-            给你的具体行动建议（Action Plan）本周任务（MIL）：继续按照之前的计划，先在本地跑通 MIL 的 Hello World 级别证明。不要管理论，先让光标下的 Goal 变成 No goals。
-            仓库规划：在你的 Lean4-Learning 仓库里，建立两个文件夹：/Practice：存放 MIL 的习题代码。/Theory：存放你对 TTFP 概念的笔记（比如：什么是 $\alpha$-conversion）。避坑指南：TTFP 是一本理论书，不要试图把 TTFP 里的每一个练习题都用 Lean 实现一遍（有些很难实现，或者 Lean 处理方式不同），把它当做一本参考书和心法秘籍，而不是操作手册。
+
+        给你的具体行动建议（Action Plan）
+        
+            本周任务（MIL）：继续按照之前的计划，先在本地跑通 MIL 的 Hello World 级别证明。不要管理论，先让光标下的 Goal 变成 No goals。
+
+            仓库规划：在你的 Lean4-Learning 仓库里，建立两个文件夹：/Practice：存放 MIL 的习题代码。/Theory：存放你对 TTFP 概念的笔记（比如：什么是 $\alpha$-conversion）。
+            
+            避坑指南：TTFP 是一本理论书，不要试图把 TTFP 里的每一个练习题都用 Lean 实现一遍（有些很难实现，或者 Lean 处理方式不同），把它当做一本参考书和心法秘籍，而不是操作手册。
 
 ### 2. GitHub 任务
 
