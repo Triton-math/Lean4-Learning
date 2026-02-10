@@ -1,10 +1,17 @@
-name = "MyLeanJourney"
+name = "lean_study"
 version = "0.1.0"
-defaultTargets = ["myleanjourney"]
+defaultTargets = ["lean_study"]
 
+# 这里是核心：引入 Mathlib 依赖
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+
+# 配置你的库（对应你截图中的 MyLeanJourney 文件夹）
 [[lean_lib]]
 name = "MyLeanJourney"
 
+# 配置可执行文件（对应你截图中的 Main.lean）
 [[lean_exe]]
-name = "myleanjourney"
+name = "lean_study"
 root = "Main"
